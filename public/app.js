@@ -63,6 +63,8 @@ function getProfile() {
         url: url + "/profile",
 
         // url :"https://login-re-password.herokuapp.com/profile",
+        // url :"https://tweeter-t10.herokuapp.com/",
+
         credentials: 'include',
     }).then((response) => {
         console.log(response.data.profile.name);
@@ -95,6 +97,7 @@ function forget() {
         method: 'post',
         url: url + "/forget-password",
         // url :"https://login-re-password.herokuapp.com/forget-password",
+        // url : "https://tweeter-t10.herokuapp.com/",
         data: {
             email: document.getElementById("forget-email").value
         },
@@ -130,7 +133,7 @@ function forgetCode() {
         method: 'post',
         url: url + "/forget-password-step-2",
         // url :"https://login-re-password.herokuapp.com/forget-password-step-2",
-
+        // url : "https://tweeter-t10.herokuapp.com/",
         data: ({
             emailVarification: emailVarification,
             newPassword: newPassword,
@@ -167,6 +170,7 @@ function logout() {
         method: 'post',
         url: url + "/logout",
         // url:'https:login-re-password.herokuapp.com/logout'
+        // url : "https://tweeter-t10.herokuapp.com/",
     }).then((response) => {
         console.log(response);
         location.href = "./login.html"
@@ -184,6 +188,7 @@ function tweet() {
         method: 'post',
         url: url + "/tweet",
         // url:'https:login-re-password.herokuapp.com/tweet',
+        // url : "https://tweeter-t10.herokuapp.com/",
         data: {
             tweet: tweet,
             userEmail: sessionStorage.getItem("userEmail"),
@@ -206,6 +211,7 @@ function getTweets() {
         method: 'get',
         url: url + "/getTweets",
         // url:'https:login-re-password.herokuapp.com/getTweets',
+        // url : "https://tweeter-t10.herokuapp.com/",
         credentials: 'include',
     }).then((response) => {
         console.log(response.data)
