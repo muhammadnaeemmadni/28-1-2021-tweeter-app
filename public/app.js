@@ -1,5 +1,5 @@
-const url = "http://localhost:3000";
-// const url='https://twitter-appp.herokuapp.com';
+// const url = "http://localhost:3000";
+const url='https://tweeter-t10.herokuapp.com/';
 // const { default: axios } = require("axios");
 var socket = io(url);
 
